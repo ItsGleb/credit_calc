@@ -1,4 +1,4 @@
-package org.example;
+package ru.vtb.online.develop.main;
 
 //TIP Для <b>запуска</b> кода нажмите <shortcut actionId="Run"/> или
 // щелкните значок <icon src="AllIcons.Actions.Execute"/> в боковой области.
