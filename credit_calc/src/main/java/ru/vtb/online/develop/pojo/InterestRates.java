@@ -28,7 +28,6 @@ public class InterestRates {
         this.maxTotalCostWithOption = maxTotalCostWithOption;
         this.minTotalCostWithOption = minTotalCostWithOption;
         this.option = option;
-
     }
 
     public String getMaxAmount() {
