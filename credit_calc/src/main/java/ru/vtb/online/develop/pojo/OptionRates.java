@@ -24,23 +24,47 @@ public class OptionRates {
         return maxLoanAmount;
     }
 
+    public void setMaxLoanAmount(String maxLoanAmount) {
+        this.maxLoanAmount = maxLoanAmount;
+    }
+
     public String getMinLoanAmount() {
         return minLoanAmount;
+    }
+
+    public void setMinLoanAmount(String minLoanAmount) {
+        this.minLoanAmount = minLoanAmount;
     }
 
     public String getMaxLoanTerm() {
         return maxLoanTerm;
     }
 
+    public void setMaxLoanTerm(String maxLoanTerm) {
+        this.maxLoanTerm = maxLoanTerm;
+    }
+
     public String getMinLoanTerm() {
         return minLoanTerm;
+    }
+
+    public void setMinLoanTerm(String minLoanTerm) {
+        this.minLoanTerm = minLoanTerm;
     }
 
     public String getOption() {
         return option;
     }
 
+    public void setOption(String option) {
+        this.option = option;
+    }
+
     public String getRate() {
         return rate;
+    }
+
+    public void setRate(String rate) {
+        this.rate = rate;
     }
 }
