@@ -18,6 +18,7 @@ import java.util.Scanner;
 
 public class Main {
     // Сделать метод для парсинга из строк в double и int. Часто используется
+    // Сделать метод для округления до сотых
     public static void main(String[] args) throws IOException {
 
         System.out.println("Введи абсолютный путь к файлу");
@@ -30,7 +31,7 @@ public class Main {
         String enterAmount = scanner.nextLine();
         System.out.println("Введи срок кредита");
         String enterTerm = scanner.nextLine();
-        int termFromTheBucket;
+
         double minRateFromTheBucket;
         double minRateWithOptionFromTheBucket;
         double rateFromOptionRate;
@@ -53,6 +54,7 @@ public class Main {
         OptionRates optionRatesBucket = ValuesSearch.findOptionRatesBucket(enterAmount, enterTerm, respOptionRates);
         // Получаем тариф опции из бакета
         rateFromOptionRate = Double.parseDouble(optionRatesBucket.getRate().replaceAll("[^0-9.]", ""));
+
         double monthlyPayment = CalculatingValues.calculateMonthlyPayment(enterAmount, minRateFromTheBucket,
                 enterTerm);
         double monthlyPaymentWithOption = CalculatingValues.calculateMonthlyPaymentWithOption(enterAmount,
@@ -60,6 +62,7 @@ public class Main {
         double savingOnOnePayment = monthlyPayment - monthlyPaymentWithOption;
         double costOfTheOption = CalculatingValues.calculateCostOfTheOption(enterAmount,enterTerm,rateFromOptionRate);
         double savingsOverTheEntireLoanTerm = savingOnOnePayment * Integer.parseInt(enterTerm.replaceAll("[^0-9]", ""));
+        // Сделать метод для вывода значений
         System.out.println("Платеж без опции = " + monthlyPayment);
         System.out.println("Платеж с опцией = " + monthlyPaymentWithOption);
         System.out.println("Стоимость опции = " + costOfTheOption);
